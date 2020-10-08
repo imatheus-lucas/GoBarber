@@ -6,7 +6,7 @@ import uploadConfig from "./config/Upload";
 const app = express();
 app.use(express.json());
 
-// app.use("/files", express.static(uploadConfig.));
+app.use("/files", express.static(uploadConfig.directory));
 app.use(Routes);
 app.listen(3333, () => {
   console.log("server started on por 3333");
